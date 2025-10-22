@@ -810,3 +810,68 @@ body.landing-page .footer {
         padding-top: 20px;
     }
 }
+.contact-info .contact-link {
+    color: #FFF; /* Match the text color */
+    text-decoration: none; /* Remove the underline */
+    transition: opacity 0.3s ease;
+}
+
+.contact-info .contact-link:hover {
+    opacity: 0.8; /* Slight opacity change for hover effect */
+}
+/* ========================================
+   ICON ANIMATIONS & SIZING (UPDATED & NEW)
+======================================== */
+
+/* General SVG sizing for all stat icons */
+.stat-icon svg {
+    width: 65px; /* Ensure consistent larger size */
+    height: 65px;
+}
+
+/* Daily Steps Icon Animation */
+@keyframes walkAnimation {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(6px); } /* Slightly more movement */
+    100% { transform: translateX(0); }
+}
+
+.stat-card:nth-child(1) .stat-icon svg {
+    animation: walkAnimation 2s ease-in-out infinite;
+}
+
+/* Active Time Icon Animation */
+@keyframes tickAnimation {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.stat-card:nth-child(2) .stat-icon svg {
+    animation: tickAnimation 8s linear infinite;
+    transform-origin: center center;
+}
+
+/* Calories Burned Icon Animation */
+@keyframes flameAnimation {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-4px) scale(1.08); } /* Slightly higher and larger */
+}
+
+.stat-card:nth-child(3) .stat-icon svg {
+    animation: flameAnimation 1.8s ease-in-out infinite;
+}
+
+/* Animation for the smaller additional flames */
+@keyframes smallFlameAnimation {
+    0%, 100% { transform: translateY(0) scale(1); opacity: 0.7; }
+    30% { transform: translateY(-2px) scale(1.03); opacity: 0.8; }
+    70% { transform: translateY(-1px) scale(1.01); opacity: 0.75; }
+}
+
+.stat-card:nth-child(3) .stat-icon svg path:nth-of-type(3) {
+    animation: smallFlameAnimation 2.2s ease-in-out infinite;
+}
+
+.stat-card:nth-child(3) .stat-icon svg path:nth-of-type(4) {
+    animation: smallFlameAnimation 2.5s ease-in-out infinite reverse; /* Reverse for variation */
+}
