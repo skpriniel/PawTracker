@@ -293,3 +293,128 @@ body {
         flex-direction: column;
     }
 }
+
+/* ========================================
+   PROFILE PAGE SPECIFIC STYLES
+   Add this to your main.css or link separately
+======================================== */
+
+/* Profile Container */
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    flex-grow: 1;
+}
+
+.profile-card {
+    background-color: #FFF;
+    border-radius: 12px;
+    padding: 35px 40px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.profile-card:hover {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.profile-card h3 {
+    color: #000;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+/* Profile Form Styles */
+.profile-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    color: #2563EB;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.required {
+    color: #EF4444;
+    margin-left: 2px;
+}
+
+.form-group input {
+    padding: 14px 18px;
+    font-size: 15px;
+    color: #6B7280;
+    border: 2px solid #E5E7EB;
+    border-radius: 8px;
+    background-color: #FFF;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #2563EB;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.form-group input:hover {
+    border-color: #D1D5DB;
+}
+
+/* Save Changes Button */
+.save-btn {
+    align-self: center;
+    margin-top: 15px;
+    padding: 12px 40px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #6B7280;
+    background-color: #FFF;
+    border: 2px solid #9CA3AF;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.save-btn:hover {
+    background-color: #F3F4F6;
+    border-color: #6B7280;
+    color: #374151;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.save-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustments for profile page */
+@media (max-width: 768px) {
+    .profile-card {
+        padding: 25px 20px;
+    }
+    
+    .form-group label {
+        font-size: 15px;
+    }
+    
+    .form-group input {
+        padding: 12px 15px;
+        font-size: 14px;
+    }
+    
+    .save-btn {
+        width: 100%;
+        padding: 14px 20px;
+    }
+}
