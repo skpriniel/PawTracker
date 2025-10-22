@@ -6,19 +6,19 @@
     <title>PawTracker - Register Your Dog</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="register-page">
     <div class="container">
-        <header>
+        <header class="register-header">
             <div class="logo">
                 <span class="dog-icon">🐕</span>
                 <h1 class="brand">PawTracker</h1>
             </div>
         </header>
 
-        <main class="content">
-            <div class="form-section">
+        <main class="register-content">
+            <div class="register-form-section">
                 <h2>Register Your Dog!</h2>
-                <form>
+                <form class="register-form" action="dashboard.html" method="get">
                     <div class="form-group">
                         <label for="dog-name">Dog's Name<span class="required">*</span></label>
                         <input type="text" id="dog-name" name="dog-name" required>
@@ -39,15 +39,15 @@
                         <input type="text" id="weight" name="weight" required>
                     </div>
 
-                    <button type="submit" class="submit-btn">
+                    <button type="submit" class="create-profile-btn">
                         <span class="paw-left">🐾</span>
-                        Create Profile
+                        <a href="dashboard.html" class="nav-item">Create Profile</a>
                         <span class="paw-right">🐾</span>
                     </button>
                 </form>
             </div>
 
-            <div class="image-section">
+            <div class="register-image-section">
                 <img src="img/DOGS.jpg" alt="Three golden retriever puppies">
             </div>
         </main>
