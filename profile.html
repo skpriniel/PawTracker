@@ -1,68 +1,87 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>PawTracker — Dog Profile</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;600;800&family=Merriweather:ital@0;1&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PawTracker - Dog Profile</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="app">
-    <aside class="sidebar">
-      <div class="logo">
-        <span class="logo-text">PawTracker</span>
-      </div>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <h1>PawTracker</h1>
+            </div>
+            
+            <nav class="nav-menu">
+                <a href="#" class="nav-item">Dashboard</a>
+                <a href="#" class="nav-item">Activity</a>
+                <a href="#" class="nav-item">Health</a>
+                <a href="#" class="nav-item active">Profile</a>
+                <a href="#" class="nav-item">About</a>
+            </nav>
+            
+            <button class="sign-out-btn">Sign out</button>
+        </aside>
 
-      <nav class="nav">
-        <a class="nav-item" href="#">Dashboard</a>
-        <a class="nav-item" href="#">Activity</a>
-        <a class="nav-item active" href="#">Health</a>
-        <a class="nav-item" href="#">Profile</a>
-        <a class="nav-item" href="#">About</a>
-      </nav>
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="header-section">
+                <h2>Dog Profile</h2>
+                <p class="subtitle">Manage your dog's information</p>
+            </div>
 
-      <div class="signout-wrap">
-        <button class="signout">Sign out</button>
-      </div>
-    </aside>
+            <div class="profile-container">
+                <div class="profile-card">
+                    <h3>Dog Information</h3>
+                    
+                    <form class="profile-form">
+                        <div class="form-group">
+                            <label for="dog-name">Dog Name<span class="required">*</span></label>
+                            <input type="text" id="dog-name" name="dog-name" value="Max" required>
+                        </div>
 
-    <main class="main">
-      <header class="page-header">
-        <h1 class="title">Dog Profile</h1>
-        <p class="subtitle">Manage your dog's information</p>
-      </header>
+                        <div class="form-group">
+                            <label for="breed">Breed<span class="required">*</span></label>
+                            <input type="text" id="breed" name="breed" value="Golden Retriever" required>
+                        </div>
 
-      <section class="card-wrap">
-        <form class="card">
-          <h2 class="card-title">Dog Information</h2>
+                        <div class="form-group">
+                            <label for="age">Age(years)<span class="required">*</span></label>
+                            <input type="text" id="age" name="age" value="3" required>
+                        </div>
 
-          <label class="field">
-            <div class="label-top"><span class="label-text">Dog Name</span><span class="req">*</span></div>
-            <input type="text" placeholder="Max" value="Max" />
-          </label>
+                        <div class="form-group">
+                            <label for="weight">Weight(kg)<span class="required">*</span></label>
+                            <input type="text" id="weight" name="weight" value="23.5kg" required>
+                        </div>
 
-          <label class="field">
-            <div class="label-top"><span class="label-text">Breed</span><span class="req">*</span></div>
-            <input type="text" placeholder="Golden Retriever" value="Golden Retriever" />
-          </label>
+                        <button type="submit" class="save-btn">Save Changes</button>
+                    </form>
+                </div>
+            </div>
 
-          <label class="field">
-            <div class="label-top"><span class="label-text">Age(years)</span><span class="req">*</span></div>
-            <input type="number" placeholder="3" value="3" />
-          </label>
+            <!-- Footer -->
+            <footer class="footer">
+                <div class="footer-content">
+                    <div class="contact-info">
+                        <h4>Contact Us</h4>
+                        <p>📍 123 Pet Haven Avenue, Barksville</p>
+                        <p>📞 +1 (555) 123-4567</p>
+                        <p>✉️ hello@pawtracker.com</p>
+                    </div>
+                    <div class="footer-text">
+                        <p><strong>Keeping paws healthy, one steps at a time.</strong> Track your pet's diet and activity with ease. Because every pawprint matters.</p>
+                    </div>
+                </div>
+                <div class="copyright">
+                    Copyright © 2025 PawTracker | All Rights Reserved.
+                </div>
+            </footer>
+        </main>
+    </div>
 
-          <label class="field">
-            <div class="label-top"><span class="label-text">Weight(kg)</span><span class="req">*</span></div>
-            <input type="text" placeholder="23.5kg" value="23.5kg" />
-          </label>
-
-          <div class="actions">
-            <button class="save" type="button">Save Changes</button>
-          </div>
-        </form>
-      </section>
-    </main>
-  </div>
+    <script src="dashboard.js"></script>
 </body>
 </html>
