@@ -296,8 +296,7 @@ body {
 
 /* ========================================
    PROFILE PAGE SPECIFIC STYLES
-   Add this to your main.css or link separately
-======================================== */
+  ======================================== */
 
 /* Profile Container */
 .profile-container {
@@ -420,7 +419,6 @@ body {
 }
 /* ========================================
    LANDING PAGE SPECIFIC STYLES
-   Add this to your main.css or link separately
 ======================================== */
 
 /* Landing Page Body Override */
@@ -622,7 +620,6 @@ body.landing-page .footer {
 }
 /* ========================================
    ABOUT PAGE SPECIFIC STYLES
-   Add this to your main.css or link separately
 ======================================== */
 
 /* About Container */
