@@ -696,3 +696,117 @@ body.landing-page .footer {
         font-size: 13px;
     }
 }
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1001;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 4px 0;
+    transition: 0.4s;
+    border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px 20px;
+        height: auto;
+    }
+
+    .logo {
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .logo h1 {
+        font-size: 28px;
+    }
+
+    .sign-out-btn {
+        display: none !important;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #E0E0E0;
+        z-index: 1000;
+        flex-direction: column;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding-bottom: 20px;
+    }
+
+    .nav-menu.open {
+        display: flex;
+    }
+    
+    .nav-menu .nav-item {
+        text-align: left;
+        padding: 15px 30px;
+        border-bottom: none;
+        border-left: 4px solid transparent;
+    }
+    
+    .nav-menu .nav-item.active {
+        border-bottom: none;
+        border-left-color: #F59E0B;
+    }
+    
+    .main-content {
+        padding-top: 80px;
+    }
+    
+    .menu-toggle.open .bar:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    .menu-toggle.open .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.open .bar:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+    
+    .sign-out-btn.mobile {
+        display: none;
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80%;
+        margin: 0;
+        z-index: 1000;
+    }
+}
+@media (max-width: 768px) {
+    /* Reduce the gap between the title section and the first card on mobile */
+    .header-section,
+    .welcome-section {
+        margin-bottom: 15px;
+    }
+    
+    /* Reduce the padding at the top of the main content container to lift the entire block */
+    .main-content {
+        padding-top: 20px;
+    }
+}

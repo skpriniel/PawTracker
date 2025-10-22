@@ -12,9 +12,14 @@
         <aside class="sidebar">
             <div class="logo">
                 <h1>PawTracker</h1>
+                <div class="menu-toggle" id="menu-toggle">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
             </div>
             
-            <nav class="nav-menu">
+            <nav class="nav-menu" id="mobile-nav">
                 <a href="dashboard.html" class="nav-item">Dashboard</a>
                 <a href="#" class="nav-item active">Activity</a>
                 <a href="health.html" class="nav-item">Health</a>
@@ -67,7 +72,7 @@
             </footer>
         </main>
     </div>
-
+    <button class="sign-out-btn mobile" id="sign-out-btn-mobile" style="display:none;">Sign out</button>
     <script src="dashboard.js"></script>
 </body>
 </html>

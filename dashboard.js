@@ -74,3 +74,65 @@ document.addEventListener('keydown', function(e) {
         navItems[currentIndex - 1].click();
     }
 });
+
+const menuToggle = document.getElementById('menu-toggle');
+const mobileNav = document.getElementById('mobile-nav');
+const sidebar = document.getElementById('sidebar');
+const mobileSignOutBtn = document.getElementById('sign-out-btn-mobile');
+const desktopSignOutBtn = document.getElementById('sign-out-btn-desktop');
+
+function toggleMobileMenu() {
+    mobileNav.classList.toggle('open');
+    menuToggle.classList.toggle('open');
+    
+    if (mobileNav.classList.contains('open')) {
+        if (window.innerWidth <= 768) {
+            mobileSignOutBtn.style.display = 'block';
+        }
+    } else {
+        mobileSignOutBtn.style.display = 'none';
+    }
+}
+
+if (menuToggle) {
+    menuToggle.addEventListener('click', toggleMobileMenu);
+}
+
+if (mobileNav) {
+    mobileNav.addEventListener('click', (e) => {
+        if (e.target.classList.contains('nav-item') && window.innerWidth <= 768) {
+            setTimeout(toggleMobileMenu, 200); 
+        }
+    });
+}
+
+if (mobileSignOutBtn) {
+    mobileSignOutBtn.addEventListener('click', function() {
+        const confirmSignOut = confirm('Are you sure you want to sign out?');
+        
+        if (confirmSignOut) {
+            alert('Signing out...');
+            console.log('User signed out');
+        }
+    });
+}
+
+window.addEventListener('resize', function() {
+    if (window.innerWidth > 768) {
+        mobileNav.classList.remove('open');
+        menuToggle.classList.remove('open');
+        mobileSignOutBtn.style.display = 'none';
+        
+        if (desktopSignOutBtn) {
+            desktopSignOutBtn.style.display = 'block';
+        }
+    } else {
+        if (desktopSignOutBtn) {
+            desktopSignOutBtn.style.display = 'none';
+        }
+    }
+});
+
+if (window.innerWidth <= 768 && desktopSignOutBtn) {
+     desktopSignOutBtn.style.display = 'none';
+}
