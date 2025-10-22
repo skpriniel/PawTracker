@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>PawTracker — Dog Profile</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;600;800&family=Merriweather:ital@0;1&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="logo">
+        <span class="logo-text">PawTracker</span>
+      </div>
+
+      <nav class="nav">
+        <a class="nav-item" href="#">Dashboard</a>
+        <a class="nav-item" href="#">Activity</a>
+        <a class="nav-item active" href="#">Health</a>
+        <a class="nav-item" href="#">Profile</a>
+        <a class="nav-item" href="#">About</a>
+      </nav>
+
+      <div class="signout-wrap">
+        <button class="signout">Sign out</button>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="page-header">
+        <h1 class="title">Dog Profile</h1>
+        <p class="subtitle">Manage your dog's information</p>
+      </header>
+
+      <section class="card-wrap">
+        <form class="card">
+          <h2 class="card-title">Dog Information</h2>
+
+          <label class="field">
+            <div class="label-top"><span class="label-text">Dog Name</span><span class="req">*</span></div>
+            <input type="text" placeholder="Max" value="Max" />
+          </label>
+
+          <label class="field">
+            <div class="label-top"><span class="label-text">Breed</span><span class="req">*</span></div>
+            <input type="text" placeholder="Golden Retriever" value="Golden Retriever" />
+          </label>
+
+          <label class="field">
+            <div class="label-top"><span class="label-text">Age(years)</span><span class="req">*</span></div>
+            <input type="number" placeholder="3" value="3" />
+          </label>
+
+          <label class="field">
+            <div class="label-top"><span class="label-text">Weight(kg)</span><span class="req">*</span></div>
+            <input type="text" placeholder="23.5kg" value="23.5kg" />
+          </label>
+
+          <div class="actions">
+            <button class="save" type="button">Save Changes</button>
+          </div>
+        </form>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
