@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     font-family: 'Montserrat', Arial, sans-serif;
@@ -141,4 +147,146 @@ footer {
     font-size: 0.9em;
     color: #fff;
     font-weight: bold;
+}
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #5B8DB8;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.dog-icon {
+    font-size: 42px;
+}
+
+.brand {
+    color: #F5A623;
+    font-size: 36px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    background-color: #D9D9D9;
+    padding: 40px;
+    border-radius: 8px;
+}
+
+.form-section h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    color: #000;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #000;
+}
+
+.required {
+    color: #FF0000;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 14px;
+    border: 2px solid #999;
+    border-radius: 6px;
+    background-color: #FFF;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #5B8DB8;
+}
+
+.submit-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    max-width: 280px;
+    margin: 30px auto 0;
+    padding: 12px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+    background-color: #C4C4C4;
+    border: 3px solid #000;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #B0B0B0;
+    transform: translateY(-2px);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+.paw-left,
+.paw-right {
+    font-size: 24px;
+}
+
+.image-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-section img {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .content {
+        grid-template-columns: 1fr;
+    }
+    
+    .brand {
+        font-size: 28px;
+    }
+    
+    .form-section h2 {
+        font-size: 28px;
+    }
 }
