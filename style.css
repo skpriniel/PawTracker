@@ -620,3 +620,82 @@ body.landing-page .footer {
         font-size: 28px;
     }
 }
+/* ========================================
+   ABOUT PAGE SPECIFIC STYLES
+   Add this to your main.css or link separately
+======================================== */
+
+/* About Container */
+.about-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    flex-grow: 1;
+}
+
+.about-card {
+    background-color: #FFF;
+    border-radius: 12px;
+    padding: 35px 40px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.about-card:hover {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.about-card h3 {
+    color: #000;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+/* About Description */
+.about-description {
+    color: #2563EB;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.about-description strong {
+    font-weight: 600;
+}
+
+/* Version Information */
+.version-info {
+    color: #9CA3AF;
+    font-size: 14px;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #E5E7EB;
+}
+
+/* Responsive Design for About Page */
+@media (max-width: 768px) {
+    .about-card {
+        padding: 25px 20px;
+    }
+    
+    .about-description {
+        font-size: 16px;
+    }
+    
+    .about-card h3 {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-description {
+        font-size: 15px;
+    }
+    
+    .version-info {
+        font-size: 13px;
+    }
+}
